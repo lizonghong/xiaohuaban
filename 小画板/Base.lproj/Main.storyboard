@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4u-X0-FbZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="回退" id="DGZ-lX-J1K">
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="Qa4-GD-0ik"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="清屏" id="oN7-se-yUl">
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" id="TyN-44-geL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="橡皮" id="9Fk-Do-Ni5">
+                                        <connections>
+                                            <action selector="eraser:" destination="BYZ-38-t0r" id="61s-aK-6zW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="相片" id="nO9-9x-cbe">
+                                        <connections>
+                                            <action selector="photos:" destination="BYZ-38-t0r" id="zNx-8Y-1bH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iM3-D6-Avu"/>
+                                    <barButtonItem title="保存" id="ANZ-2P-m1p">
+                                        <connections>
+                                            <action selector="save:" destination="BYZ-38-t0r" id="Gml-Vs-PHI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-MW-pUw" customClass="DrawView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="500"/>
+                                <color key="backgroundColor" red="0.42977800030000002" green="1" blue="0.9217899464" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yug-EP-Kca">
+                                <rect key="frame" x="0.0" y="560" width="375" height="107"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="3Bb-x5-Hmf">
+                                        <rect key="frame" x="-2" y="0.0" width="379" height="31"/>
+                                        <connections>
+                                            <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mEN-Yo-xkH"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSn-0P-yOB">
+                                        <rect key="frame" x="98" y="53" width="77" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.91732393126618839" blue="0.28979298290893407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yph-dv-RSt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em9-Gh-DuG">
+                                        <rect key="frame" x="193" y="53" width="77" height="30"/>
+                                        <color key="backgroundColor" red="0.25127673950000001" green="1" blue="0.2610877231" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8r-NY-xul"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2O-nx-t8g">
+                                        <rect key="frame" x="278" y="53" width="77" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Koo-d6-O2w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqN-GH-LPV">
+                                        <rect key="frame" x="8" y="53" width="77" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.25940865429999999" blue="0.33660015500000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCZ-BE-ZAu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="drawView" destination="oSl-MW-pUw" id="89B-fe-C8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324.5" y="285.5"/>
+        </scene>
+    </scenes>
+</document>
